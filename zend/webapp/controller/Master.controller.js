@@ -10,6 +10,12 @@ sap.ui.define([
         return Controller.extend("zend.controller.Master", {
             onInit: function () {
 
-            }
+            },
+            NavtoDetail: function(){
+                this.getOwnerComponent().getRouter().navTo("detail")
+            },
+            NavtoDesc : function(){
+                this.getOwnerComponent().getRouter().navTo("desc")
+            },
         });
     });

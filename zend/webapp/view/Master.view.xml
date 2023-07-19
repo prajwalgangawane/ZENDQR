@@ -2,6 +2,10 @@
     xmlns:mvc="sap.ui.core.mvc" displayBlock="true"
     xmlns="sap.m">
     <Page id="page" title="{i18n>title}">
-        <content />
+        <content>
+            <Text text="Master Page"></Text>
+            <Button text="Detail" press="NavtoDetail"></Button>
+            <Button text="Desc" press="NavtoDesc"></Button>
+        </content>
     </Page>
 </mvc:View>
