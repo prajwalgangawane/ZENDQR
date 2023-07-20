@@ -1,10 +1,11 @@
 sap.ui.define([
-    "sap/ui/core/mvc/Controller"
+    "sap/ui/core/mvc/Controller",
+    "sap/ui/core/routing/History"
 ],
     /**
      * @param {typeof sap.ui.core.mvc.Controller} Controller
      */
-    function (Controller) {
+    function (Controller, History) {
         "use strict";
 
         return Controller.extend("zend.controller.Desc", {
@@ -33,6 +34,18 @@ sap.ui.define([
                     var createRadioInput = this.getView().byId('transporterInput').setVisible(false)
                     var createRadioInput = this.getView().byId('vehicleReg').setVisible(false)
                     var createRadioInput = this.getView().byId('vehicleRegInput').setVisible(false)
+                }
+            },
+
+            onNavBack: function () {
+                var oHistory = History.getInstance();
+                var sPreviousHash = oHistory.getPreviousHash();
+    
+                if (sPreviousHash !== undefined) {
+                    window.history.go(-1);
+                } else {
+                    var oRouter = this.getOwnerComponent().getRouter();
+                    oRouter.navTo("detail", {}, true);
                 }
             }
         });

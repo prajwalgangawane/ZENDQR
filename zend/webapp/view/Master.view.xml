@@ -4,7 +4,7 @@
     <Page id="page" title="{i18n>title}">
         <content>
             <VBox class="sapUiSmallMargin">
-		<Label text="Default RadioButton use" labelFor="GroupA" />
+		<Label text="Create or Change" labelFor="GroupA" />
 		<RadioButtonGroup id="GroupA" select="onSelect">
 			<RadioButton id="createBtn" text="Outer Label Creation" selected="true" />
 			<RadioButton id="changeBtn" text="Outer Label Change" />
