@@ -5,9 +5,9 @@
         <content>
             <VBox class="sapUiSmallMargin">
 		<Label text="Default RadioButton use" labelFor="GroupA" />
-		<RadioButtonGroup id="GroupA">
-			<RadioButton text="Outer Label Creation" selected="true" />
-			<RadioButton text="Outer Label Change" />
+		<RadioButtonGroup id="GroupA" select="onSelect">
+			<RadioButton id="createBtn" text="Outer Label Creation" selected="true" />
+			<RadioButton id="changeBtn" text="Outer Label Change" />
 		</RadioButtonGroup>
 	</VBox>
     <Panel >
@@ -20,7 +20,17 @@
             <Label text="ETL Material Code" class="sapUiSmallMarginEnd"/>
             <Input ></Input>
             </HBox>
+            <HBox >
+            <Label id="lableNum" visible="false" text="Label Number" class="sapUiSmallMarginEnd"/>
+            <Input id="lableNumInput" visible="false" ></Input>
+            </HBox>
         </VBox>
+    </Panel>
+    <Panel >
+    <HBox >
+        <Label text="Scan Laser QRCode"></Label>
+        <Input ></Input>
+        </HBox>
     </Panel>
         </content>
     </Page>

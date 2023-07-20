@@ -1,0 +1,25 @@
+<mvc:View
+    xmlns:mvc="sap.ui.core.mvc" displayBlock="true"
+    xmlns="sap.m">
+    <!-- controllerName="zend.controller.Detail" -->
+    <Page id="page" title="{i18n>title}">
+        <content>
+            <Panel >
+        <VBox >
+            <HBox >
+            <Label text="Plant" class="sapUiSmallMarginEnd"/>
+            <odata:ComboBox ></odata:ComboBox>
+            </HBox>
+             <HBox >
+            <Label text="ETL Material Code" class="sapUiSmallMarginEnd"/>
+            <Input ></Input>
+            </HBox>
+            <HBox >
+            <Label text="Label Number" class="sapUiSmallMarginEnd"/>
+            <Input ></Input>
+            </HBox>
+        </VBox>
+    </Panel>
+        </content>
+    </Page>
+</mvc:View>
