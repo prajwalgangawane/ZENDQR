@@ -1,39 +1,113 @@
-<mvc:View
-    xmlns:mvc="sap.ui.core.mvc" displayBlock="true"
+<mvc:View xmlns:networkgraph="sap.suite.ui.commons.networkgraph" xmlns:odata="sap.ui.comp.odata" controllerName="zend.controller.Desc"
+    xmlns:mvc="sap.ui.core.mvc" displayBlock="true" xmlns:core="sap.ui.core" xmlns:form="sap.ui.layout.form"
     xmlns="sap.m">
-    <!-- controllerName="zend.controller.Detail" -->
-    <Page id="page" title="{i18n>title}">
+    <Page id="page" title="{i18n>title}" showNavButton="true"
+		navButtonPress=".onNavBack">
         <content>
-            <!-- <Panel width="auto" class="sapUiResponsiveMargin" accessibleRole="Region">
-                <headerToolbar>
-                    <OverflowToolbar>
-                        <Title text="Panel with picture"/>
-                    </OverflowToolbar>
-                </headerToolbar>
-                <content>
-                    <l:HorizontalLayout>
-                        <Image src="{img>/products/pic1}" width="10em" />
-                    </l:HorizontalLayout>
-                    <Text text="Lorem ipsum dolor st amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat" />
-                </content>
-            </Panel> -->
-            <Panel width="auto" class="sapUiResponsiveMargin">
-                <headerToolbar>
-                    <OverflowToolbar>
-                        <Title text="Create Biling Document"/>
-                        <ToolbarSpacer />
-                        <Button icon="sap-icon://settings" />
-                        <Button icon="sap-icon://drop-down-list" />
-                    </OverflowToolbar>
-                </headerToolbar>
-                <content>
-                    <HBox class="sapUiSmallMargin">
-                        <Text text="Sales Organization"  class="sapUiTinyMarginTop"/>
-                        <Input id="sales_organization" class="sapUiSmallMarginBeginEnd" type="Tel"></Input>
-                    </HBox>
+            <VBox class="sapUiSmallMargin">
+                <HBox >
+                <Label  visible="true" text="Sales Organisation" />
+              <Input  visible="true"  value="1100" width="50%" />
+              </HBox>
+		<Label text="Output Selections" labelFor="GroupA" />
+		<RadioButtonGroup id="GroupA" select="onSelect">
+			<RadioButton id="createBtn" text="Post Goods Issue" selected="true" />
+			<RadioButton id="changeBtn" text="Shipment" />
+		</RadioButtonGroup>
+	</VBox>
+    <Panel headerText="Input Selection" class="sapUiMediumMarginBottom" >
+        
+            <form:SimpleForm layout="ResponsiveGridLayout">
+            <VBox ></VBox>  
+            <Label text="Plant"  />
+                 <ComboBox width="50%">
+                    <core:Item  key="IN" text="INDIA" ></core:Item>
+                    <core:Item  key="CA"  text="CANADA"></core:Item>
+                    <core:Item  key="AM"  text="AMERICA" > </core:Item>
+                 </ComboBox>
+                 
+                <Label id="delLabel" visible="true" text="Delivery" />
+              <Input id="delInput" visible="true"  value=""  />
+              <HBox class="sapUiMediumMarginStart">
+              <Label id="toLabel" visible="false" text="To" />
+              <Input id="toInput" visible="false" value="" width="50%" />
+              </HBox>
+              <Label id="transporter" visible="false" text="Transporter"/>
+            <Input id="transporterInput" visible="false" width="50%"></Input>
+            <Label id="vehicleReg" visible="false" text="Vehicle Reg. No"/>
+            <Input id="vehicleRegInput" visible="false" width="50%"></Input>
+                </form:SimpleForm>
+        
+    </Panel>
+    
+    <Panel class="sapUiMediumMarginBottom">
+    <form:SimpleForm layout="ResponsiveGridLayout" class="sapUiMediumMarginBottom">  
+            <Label text="Sales Organisation"  />
+              <Input  value="" width="50%"/>
 
-                </content>
-            </Panel>
-        </content>
+               <Label text="Plant"  />
+              <Input  value="" width="50%"/>
+                </form:SimpleForm>
+    </Panel>
+
+    <Panel class="sapUiMediumMarginBottom">
+    <form:SimpleForm layout="ResponsiveGridLayout" class="sapUiMediumMarginBottom">  
+            <Label text="Scan Outer QRCode"  />
+              <Input  value="" width="50%"/>
+                </form:SimpleForm>
+    </Panel>
+    <Panel headerText="Laser QR Code Detail" class="sapUiTinyMarginBottom">
+        
+                <headerToolbar>
+                    <OverflowToolbar>
+                        
+                        <!-- <SearchField width = "30%" search = "onSearch"  /> -->
+                        <Title text="Delivery Challan Details"></Title><ToolbarSpacer />
+                        <Button icon="sap-icon://add"  type="Emphasized"  />
+                        <Button icon="sap-icon://less"  type="Emphasized"  />
+
+                    </OverflowToolbar>
+                </headerToolbar>
+                <Table 
+                    
+                    width="auto"
+                    id="table">
+                <columns>
+                <!-- <Column><header><Text text="ID"></Text></header></Column> -->
+                <Column><header><Text text="DelvNo"></Text></header></Column>
+                <Column><header><Text text="DelvLn"></Text></header></Column>
+                <Column><header><Text text="Material"></Text></header></Column>
+                <Column><header><Text text="Customer Code"></Text></header></Column>
+                <Column><header><Text text="Material Desc"></Text></header></Column>
+                <Column><header><Text text="Delivered Qty"></Text></header></Column>
+                <Column><header><Text text="U..."></Text></header></Column>
+                <Column><header><Text text="Packaging Qty"></Text></header></Column>
+                <Column><footer><HBox justifyContent="End"><Button text="Save" type="Emphasized" ></Button><Button text="Submit" type="Emphasized"></Button></HBox></footer></Column>
+        
+                <!-- <Column><header><Text text="{i18n>del}" /></header></Column> -->
+                </columns>
+
+                <items>
+                    <ColumnListItem id="listItem">
+                    <cells>
+                        <ObjectListItem title="021542054102"></ObjectListItem>
+                        <ObjectListItem title="2023"></ObjectListItem>
+                        <ObjectListItem title="0012345"></ObjectListItem>
+                        <ObjectListItem title=""></ObjectListItem>
+                        <ObjectListItem title="Case Submitted"></ObjectListItem>
+                        <ObjectListItem title="5.000"></ObjectListItem>
+                        <ObjectListItem title="EA"></ObjectListItem>
+                        <ObjectListItem title="5.000"></ObjectListItem>
+                        <!-- <Button type="Transparent" class="onColourEdit" press="onUpdate" icon="sap-icon://edit"></Button>
+                        <Button type="Transparent" class="onColourDelete" press="onDelete" icon="sap-icon://delete"></Button> -->
+                    </cells>
+                    </ColumnListItem>
+                </items>
+            </Table>
+            <!-- <HBox justifyContent="End">
+            <Button text="Outer Label Print" press="NavtoDetail" type="Emphasized"></Button>
+            </HBox> -->
+    </Panel>
+            </content>
     </Page>
 </mvc:View>

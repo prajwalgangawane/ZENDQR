@@ -11,12 +11,12 @@ sap.ui.define([
             onInit: function () {
 
             },
-            // NavtoDetail: function(){
-            //     this.getOwnerComponent().getRouter().navTo("detail")
-            // },
-            NavtoDesc : function(){
-                this.getOwnerComponent().getRouter().navTo("desc")
+            NavtoDetail: function(){
+                this.getOwnerComponent().getRouter().navTo("detail")
             },
+            // NavtoDesc : function(){
+            //     this.getOwnerComponent().getRouter().navTo("desc")
+            // },
             onSelect: function(oEvent) {
                 console.log(oEvent)
                 var selectItem = oEvent.getParameter('selectedIndex');
