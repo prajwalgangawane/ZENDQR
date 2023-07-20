@@ -1,7 +1,27 @@
-<mvc:View controllerName="zend.controller.Master"
+<mvc:View xmlns:networkgraph="sap.suite.ui.commons.networkgraph" xmlns:odata="sap.ui.comp.odata" controllerName="zend.controller.Master"
     xmlns:mvc="sap.ui.core.mvc" displayBlock="true"
     xmlns="sap.m">
     <Page id="page" title="{i18n>title}">
-        <content />
+        <content>
+            <VBox class="sapUiSmallMargin">
+		<Label text="Default RadioButton use" labelFor="GroupA" />
+		<RadioButtonGroup id="GroupA">
+			<RadioButton text="Outer Label Creation" selected="true" />
+			<RadioButton text="Outer Label Change" />
+		</RadioButtonGroup>
+	</VBox>
+    <Panel >
+        <VBox >
+            <HBox >
+            <Label text="Plant" class="sapUiSmallMarginEnd"/>
+            <odata:ComboBox ></odata:ComboBox>
+            </HBox>
+             <HBox >
+            <Label text="ETL Material Code" class="sapUiSmallMarginEnd"/>
+            <Input ></Input>
+            </HBox>
+        </VBox>
+    </Panel>
+        </content>
     </Page>
 </mvc:View>
