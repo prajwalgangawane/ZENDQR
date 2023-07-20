@@ -11,9 +11,9 @@ sap.ui.define([
             onInit: function () {
 
             },
-            // NavtoDetail: function(){
-            //     this.getOwnerComponent().getRouter().navTo("detail")
-            // },
+            NavtoDetail: function(){
+                this.getOwnerComponent().getRouter().navTo("detail")
+            },
             // NavtoDesc : function(){
             //     this.getOwnerComponent().getRouter().navTo("desc")
             // },

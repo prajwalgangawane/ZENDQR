@@ -1,5 +1,5 @@
 <mvc:View xmlns:networkgraph="sap.suite.ui.commons.networkgraph" xmlns:odata="sap.ui.comp.odata" controllerName="zend.controller.Master"
-    xmlns:mvc="sap.ui.core.mvc" displayBlock="true"
+    xmlns:mvc="sap.ui.core.mvc" displayBlock="true" xmlns:core="sap.ui.core" xmlns:form="sap.ui.layout.form"
     xmlns="sap.m">
     <Page id="page" title="{i18n>title}">
         <content>
@@ -10,28 +10,91 @@
 			<RadioButton id="changeBtn" text="Outer Label Change" />
 		</RadioButtonGroup>
 	</VBox>
-    <Panel >
-        <VBox >
-            <HBox >
-            <Label text="Plant" class="sapUiSmallMarginEnd"/>
-            <odata:ComboBox ></odata:ComboBox>
-            </HBox>
-             <HBox >
-            <Label text="ETL Material Code" class="sapUiSmallMarginEnd"/>
-            <Input ></Input>
-            </HBox>
-            <HBox >
-            <Label id="lableNum" visible="false" text="Label Number" class="sapUiSmallMarginEnd"/>
-            <Input id="lableNumInput" visible="false" ></Input>
-            </HBox>
-        </VBox>
+    <Panel class="sapUiMediumMarginBottom" >
+        
+            <form:SimpleForm layout="ResponsiveGridLayout">  
+            <Label text="Plant"  />
+                 <ComboBox width="50%">
+                    <core:Item  key="IN" text="INDIA" ></core:Item>
+                    <core:Item  key="CA"  text="CANADA"></core:Item>
+                    <core:Item  key="AM"  text="AMERICA" > </core:Item>
+                 </ComboBox>
+                <Label text="ETL Material Code" />
+              <Input  value="bfb" width="50%" />
+              <Label id="lableNum" visible="false" text="Label Number"/>
+            <Input id="lableNumInput" visible="false" width="50%"></Input>
+                </form:SimpleForm>
+        
     </Panel>
-    <Panel >
-    <HBox >
-        <Label text="Scan Laser QRCode"></Label>
-        <Input ></Input>
-        </HBox>
+    <form:SimpleForm layout="ResponsiveGridLayout" class="sapUiMediumMarginBottom">  
+            <Label text="Plant"  />
+                 <ComboBox width="50%">
+                    <core:Item  key="IN" text="INDIA" ></core:Item>
+                    <core:Item  key="CA"  text="CANADA"></core:Item>
+                    <core:Item  key="AM"  text="AMERICA" > </core:Item>
+                 </ComboBox>
+                <Label text="ETL Material Code" />
+              <Input  value="bfb" width="50%"/>
+              <Label text="Customer Part No" />
+              <Input  value="134235" width="50%"/>
+
+              <HBox >
+                <Label text="Packaging No" class="sapUiTinyMarginEnd"></Label>
+                <Input value="2" width="20%" class="sapUiSmallMarginEnd"></Input>
+                <Label text="Number of Parts" class="sapUiTinyMarginEnd"></Label>
+                <Input value="2" width="20%" class="sapUiSmallMarginEnd"></Input>
+              </HBox>
+                </form:SimpleForm>
+    <Panel class="sapUiMediumMarginBottom">
+    <form:SimpleForm layout="ResponsiveGridLayout" class="sapUiMediumMarginBottom">  
+            <Label text="Scan Laser QRCode"  />
+              <Input  value="" width="50%"/>
+                </form:SimpleForm>
     </Panel>
-        </content>
+    <Panel headerText="Laser QR Code Detail" class="sapUiTinyMarginBottom">
+        
+                <headerToolbar>
+                    <OverflowToolbar>
+                        
+                        <!-- <SearchField width = "30%" search = "onSearch"  /> -->
+                        <Title text="Laser QR Code Detail"></Title><ToolbarSpacer />
+                        <Button icon="sap-icon://add"  type="Emphasized"  />
+                        <Button icon="sap-icon://less"  type="Emphasized"  />
+
+                    </OverflowToolbar>
+                </headerToolbar>
+                <Table 
+                    
+                    width="auto"
+                    id="table">
+                <columns>
+                <!-- <Column><header><Text text="ID"></Text></header></Column> -->
+                <Column><header><Text text="Customer Part Number"></Text></header></Column>
+                <Column><header><Text text="Year"></Text></header></Column>
+                <Column><header><Text text="Serial Number"></Text></header></Column>
+                <Column><header><Text text="Date"></Text></header></Column>
+                <Column><footer><HBox justifyContent="End"><Button text="Save" type="Emphasized" ></Button><Button text="Submit" type="Emphasized"></Button></HBox></footer></Column>
+        
+                <!-- <Column><header><Text text="{i18n>del}" /></header></Column> -->
+                </columns>
+
+                <items>
+                    <ColumnListItem id="listItem">
+                    <cells>
+                        <ObjectListItem title="JXYIEBK43VJY"></ObjectListItem>
+                        <ObjectListItem title="2023"></ObjectListItem>
+                        <ObjectListItem title="0012345"></ObjectListItem>
+                        <ObjectListItem title="20/07/2023"></ObjectListItem>
+                        <!-- <Button type="Transparent" class="onColourEdit" press="onUpdate" icon="sap-icon://edit"></Button>
+                        <Button type="Transparent" class="onColourDelete" press="onDelete" icon="sap-icon://delete"></Button> -->
+                    </cells>
+                    </ColumnListItem>
+                </items>
+            </Table>
+            <HBox justifyContent="End">
+            <Button text="Outer Label Print" press="NavtoDetail" type="Emphasized"></Button>
+            </HBox>
+    </Panel>
+            </content>
     </Page>
 </mvc:View>
