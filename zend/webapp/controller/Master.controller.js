@@ -14,9 +14,9 @@ sap.ui.define([
             // NavtoDetail: function(){
             //     this.getOwnerComponent().getRouter().navTo("detail")
             // },
-            // NavtoDesc : function(){
-            //     this.getOwnerComponent().getRouter().navTo("desc")
-            // },
+            NavtoDesc : function(){
+                this.getOwnerComponent().getRouter().navTo("desc")
+            },
             onSelect: function(oEvent) {
                 console.log(oEvent)
                 var selectItem = oEvent.getParameter('selectedIndex');

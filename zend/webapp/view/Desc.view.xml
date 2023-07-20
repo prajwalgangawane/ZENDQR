@@ -4,7 +4,36 @@
     <!-- controllerName="zend.controller.Detail" -->
     <Page id="page" title="{i18n>title}">
         <content>
-            <Text text="Desc Page"></Text>
+            <!-- <Panel width="auto" class="sapUiResponsiveMargin" accessibleRole="Region">
+                <headerToolbar>
+                    <OverflowToolbar>
+                        <Title text="Panel with picture"/>
+                    </OverflowToolbar>
+                </headerToolbar>
+                <content>
+                    <l:HorizontalLayout>
+                        <Image src="{img>/products/pic1}" width="10em" />
+                    </l:HorizontalLayout>
+                    <Text text="Lorem ipsum dolor st amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat" />
+                </content>
+            </Panel> -->
+            <Panel width="auto" class="sapUiResponsiveMargin">
+                <headerToolbar>
+                    <OverflowToolbar>
+                        <Title text="Create Biling Document"/>
+                        <ToolbarSpacer />
+                        <Button icon="sap-icon://settings" />
+                        <Button icon="sap-icon://drop-down-list" />
+                    </OverflowToolbar>
+                </headerToolbar>
+                <content>
+                    <HBox class="sapUiSmallMargin">
+                        <Text text="Sales Organization"  class="sapUiTinyMarginTop"/>
+                        <Input id="sales_organization" class="sapUiSmallMarginBeginEnd" type="Tel"></Input>
+                    </HBox>
+
+                </content>
+            </Panel>
         </content>
     </Page>
 </mvc:View>
