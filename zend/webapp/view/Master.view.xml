@@ -3,67 +3,71 @@
     xmlns="sap.m">
     <Page id="page" title="{i18n>title}">
         <content>
+        <FlexBox justifyContent="SpaceBetween" >
             <VBox class="sapUiSmallMargin">
 		<Label text="Create or Change" labelFor="GroupA" />
+        <!-- <HBox justifyContent="End"> -->
+        <!-- <HeaderContainer > -->
+            <!-- </HeaderContainer> -->
+        <!-- </HBox> -->
 		<RadioButtonGroup id="GroupA" select="onSelect">
 			<RadioButton id="createBtn" text="Outer Label Creation" selected="true" />
 			<RadioButton id="changeBtn" text="Outer Label Change" />
 		</RadioButtonGroup>
 	</VBox>
-    <Panel class="sapUiMediumMarginBottom" >
-        
-            <form:SimpleForm layout="ResponsiveGridLayout">  
-            <Label text="Plant"  />
-                 <ComboBox width="20%">
-                    <core:Item  key="IN" text="INDIA" ></core:Item>
-                    <core:Item  key="CA"  text="CANADA"></core:Item>
-                    <core:Item  key="AM"  text="AMERICA" > </core:Item>
-                 </ComboBox>
-                <Label text="ETL Material Code" />
-              <Input  value="bfb" width="20%" />
-              <Label id="lableNum" visible="false" text="Label Number"/>
-            <Input id="lableNumInput" visible="false" width="20%"></Input>
-                </form:SimpleForm>
-        
-    </Panel>
-    <form:SimpleForm layout="ResponsiveGridLayout" class="sapUiMediumMarginBottom">  
-            <Label text="Plant"  />
-                 <ComboBox width="20%">
-                    <core:Item  key="IN" text="INDIA" ></core:Item>
-                    <core:Item  key="CA"  text="CANADA"></core:Item>
-                    <core:Item  key="AM"  text="AMERICA" > </core:Item>
-                 </ComboBox>
-                <Label text="ETL Material Code" />
-              <Input  value="bfb" width="20%"/>
-              <Label text="Customer Part No" />
-              <Input  value="134235" width="40%"/>
+                <Button icon="sap-icon://print" press="onPrint" class='sapUiSmallMargin'></Button>
 
-              <HBox >
-                <Label text="Packaging No" class="sapUiTinyMarginEnd"></Label>
-                <Input value="2" width="20%" class="sapUiSmallMarginEnd"></Input>
-                <Label text="Number of Parts" class="sapUiTinyMarginEnd"></Label>
-                <Input value="2" width="20%" class="sapUiSmallMarginEnd"></Input>
-              </HBox>
-                </form:SimpleForm>
-    <Panel class="sapUiMediumMarginBottom">
-    <form:SimpleForm layout="ResponsiveGridLayout" class="sapUiMediumMarginBottom">  
-            <Label text="Scan Laser QRCode"  />
-              <Input  value="" width="20%"/>
-                </form:SimpleForm>
-    </Panel>
-    <Panel headerText="Laser QR Code Detail" class="sapUiTinyMarginBottom">
+    </FlexBox>
+    <Panel class="sapUiMediumMarginBottom" >
+            
+            <!-- <form:SimpleForm layout="ResponsiveGridLayout" >   -->
+            
+            <Label text="Plant"  class="sapUiSmallMarginEnd"/>
+                 <ComboBox width="15%" class="sapUiMediumMarginEnd">
+                    <core:Item  key="IN" text="INDIA" ></core:Item>
+                    <core:Item  key="CA"  text="CANADA"></core:Item>
+                    <core:Item  key="AM"  text="AMERICA" > </core:Item>
+                 </ComboBox>
+                <Label text="ETL Material Code" class="sapUiSmallMarginEnd"/>
+              <Input  value="bfb" width="15%" class="sapUiMediumMarginEnd"/>
+              
+              <Label id="lableNum" visible="false" text="Label Number" class="sapUiSmallMarginEnd"/>
+            <Input id="lableNumInput" visible="false" width="15%" class="sapUiMediumMarginEnd"></Input>
+            
+                  <Button text="Submit" type="Emphasized" width="15%"></Button>
+            
+                <!-- </form:SimpleForm> -->
         
+    </Panel>
+    
+    <Panel headerText="Laser QR Code Detail" class="sapUiTinyMarginBottom">
+
+                <form:SimpleForm layout="ColumnLayout" columnsM="2" class="sapUiMediumMarginBottom"> 
+
+                <Label text="Description" />
+                <Input value="L/T CASE TRNXLE TRANSMISSION B6" enabled="false" width="20rem"></Input>
+                <Label text="Customer Part No" />
+                <Input  value="134235" enabled="false" width="20rem"/>
+                <Label text="Packaging No" class="sapUiTinyMarginEnd"></Label>
+                <Input value="2" width="20%" enabled="false" class="sapUiSmallMarginEnd"></Input>
+                <Label text="Number of Parts" class="sapUiTinyMarginEnd"></Label>
+                <Input value="2" width="20%" enabled="false" class="sapUiSmallMarginEnd"></Input>
+              
+                </form:SimpleForm>
                 <headerToolbar>
                     <OverflowToolbar>
                         
+                        
                         <!-- <SearchField width = "30%" search = "onSearch"  /> -->
                         <Title text="Laser QR Code Detail"></Title><ToolbarSpacer />
-                        <Button icon="sap-icon://less"  type="Emphasized"  />
+                        <Label text="Scan Laser QRCode"  />
+                        <Input  value="" width="20%"/>
+                        <Button icon="sap-icon://add"  type="Emphasized"  class="sapUiSmallMargin"/>
 
                     </OverflowToolbar>
                 </headerToolbar>
                 <Table 
-                    
+                    class="sapUiResponsiveMargin"
                     width="auto"
                     id="table">
                 <columns>
@@ -72,7 +76,8 @@
                 <Column><header><Text text="Year"></Text></header></Column>
                 <Column><header><Text text="Serial Number"></Text></header></Column>
                 <Column><header><Text text="Date"></Text></header></Column>
-                <Column><footer><HBox justifyContent="End"><Button text="Save" type="Emphasized" ></Button><Button text="Submit" type="Emphasized"></Button></HBox></footer></Column>
+                <Column><Text text="Delete"></Text></Column>
+                <Column><footer><HBox justifyContent="End"><Button text="Save" type="Emphasized" class="sapUiSmallMarginEnd"></Button><Button text="Submit" type="Emphasized"></Button></HBox></footer></Column>
         
                 <!-- <Column><header><Text text="{i18n>del}" /></header></Column> -->
                 </columns>
@@ -84,8 +89,8 @@
                         <ObjectListItem title="2023"></ObjectListItem>
                         <ObjectListItem title="0012345"></ObjectListItem>
                         <ObjectListItem title="20/07/2023"></ObjectListItem>
-                        <!-- <Button type="Transparent" class="onColourEdit" press="onUpdate" icon="sap-icon://edit"></Button>
-                        <Button type="Transparent" class="onColourDelete" press="onDelete" icon="sap-icon://delete"></Button> -->
+                        <!-- <Button type="Transparent" class="onColourEdit" press="onUpdate" icon="sap-icon://edit"></Button> -->
+                        <Button type="Transparent" class="onColourDelete" press="onDelete" icon="sap-icon://delete"></Button>
                     </cells>
                     </ColumnListItem>
                 </items>

@@ -25,6 +25,12 @@ sap.ui.define([
                 var createRadioInput = this.getView().byId('transporterInput').setVisible(true)
                 var createRadioInput = this.getView().byId('vehicleReg').setVisible(true)
                 var createRadioInput = this.getView().byId('vehicleRegInput').setVisible(true)
+                var createRadioInput = this.getView().byId('vehicleTypeInput').setVisible(true)
+                var createRadioInput = this.getView().byId('loadTypeInput').setVisible(true)
+                var createRadioInput = this.getView().byId('modeTrptInput').setVisible(true)
+                var createRadioInput = this.getView().byId('vehicleType').setVisible(true)
+                var createRadioInput = this.getView().byId('loadType').setVisible(true)
+                var createRadioInput = this.getView().byId('modeTrpt').setVisible(true)
                 }else{
                     // var createRadio = this.getView().byId('delLabel').setVisible(false)
                     // var createRadioInput = this.getView().byId('delInput').setVisible(false)
@@ -34,6 +40,12 @@ sap.ui.define([
                     var createRadioInput = this.getView().byId('transporterInput').setVisible(false)
                     var createRadioInput = this.getView().byId('vehicleReg').setVisible(false)
                     var createRadioInput = this.getView().byId('vehicleRegInput').setVisible(false)
+                    var createRadioInput = this.getView().byId('vehicleTypeInput').setVisible(false)
+                    var createRadioInput = this.getView().byId('loadTypeInput').setVisible(false)
+                    var createRadioInput = this.getView().byId('modeTrptInput').setVisible(false)
+                    var createRadioInput = this.getView().byId('vehicleType').setVisible(false)
+                    var createRadioInput = this.getView().byId('loadType').setVisible(false)
+                    var createRadioInput = this.getView().byId('modeTrpt').setVisible(false)
                 }
             },
 
