@@ -7,7 +7,7 @@
             <VBox class="sapUiSmallMargin">
                 <HBox >
                 <Label  visible="true" text="Sales Organisation" />
-              <Input  visible="true"  value="1100" width="50%" />
+              <Input  visible="true"  value="1100" width="30%" />
               </HBox>
 		<Label text="Output Selections" labelFor="GroupA" />
 		<RadioButtonGroup id="GroupA" select="onSelect">
@@ -20,40 +20,40 @@
             <form:SimpleForm layout="ResponsiveGridLayout">
             <VBox ></VBox>  
             <Label text="Plant"  />
-                 <ComboBox width="50%">
+                 <ComboBox width="15%">
                     <core:Item  key="IN" text="INDIA" ></core:Item>
                     <core:Item  key="CA"  text="CANADA"></core:Item>
                     <core:Item  key="AM"  text="AMERICA" > </core:Item>
                  </ComboBox>
                  
                 <Label id="delLabel" visible="true" text="Delivery" />
-              <Input id="delInput" visible="true"  value=""  />
+              <Input id="delInput" visible="true"  value="" width="30%" />
               <HBox class="sapUiMediumMarginStart">
-              <Label id="toLabel" visible="false" text="To" />
-              <Input id="toInput" visible="false" value="" width="50%" />
+              <Label id="toLabel" visible="false" text="To: "  class="sapUiSmallMarginEnd"/>
+              <Input id="toInput" visible="false" value="" width="60%" />
               </HBox>
               <Label id="transporter" visible="false" text="Transporter"/>
-            <Input id="transporterInput" visible="false" width="50%"></Input>
+            <Input id="transporterInput" visible="false" width="15%"></Input>
             <Label id="vehicleReg" visible="false" text="Vehicle Reg. No"/>
-            <Input id="vehicleRegInput" visible="false" width="50%"></Input>
+            <Input id="vehicleRegInput" visible="false" width="15%"></Input>
                 </form:SimpleForm>
         
     </Panel>
     
-    <Panel class="sapUiMediumMarginBottom">
+    <!-- <Panel class="sapUiMediumMarginBottom">
     <form:SimpleForm layout="ResponsiveGridLayout" class="sapUiMediumMarginBottom">  
             <Label text="Sales Organisation"  />
-              <Input  value="" width="50%"/>
+              <Input  value="" width="30%"/>
 
                <Label text="Plant"  />
-              <Input  value="" width="50%"/>
+              <Input  value="" width="30%"/>
                 </form:SimpleForm>
-    </Panel>
+    </Panel> -->
 
     <Panel class="sapUiMediumMarginBottom">
     <form:SimpleForm layout="ResponsiveGridLayout" class="sapUiMediumMarginBottom">  
             <Label text="Scan Outer QRCode"  />
-              <Input  value="" width="50%"/>
+              <Input  value="" width="30%"/>
                 </form:SimpleForm>
     </Panel>
     <Panel headerText="Laser QR Code Detail" class="sapUiTinyMarginBottom">
@@ -63,7 +63,6 @@
                         
                         <!-- <SearchField width = "30%" search = "onSearch"  /> -->
                         <Title text="Delivery Challan Details"></Title><ToolbarSpacer />
-                        <Button icon="sap-icon://add"  type="Emphasized"  />
                         <Button icon="sap-icon://less"  type="Emphasized"  />
 
                     </OverflowToolbar>

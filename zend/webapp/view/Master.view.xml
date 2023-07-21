@@ -14,29 +14,29 @@
         
             <form:SimpleForm layout="ResponsiveGridLayout">  
             <Label text="Plant"  />
-                 <ComboBox width="50%">
+                 <ComboBox width="20%">
                     <core:Item  key="IN" text="INDIA" ></core:Item>
                     <core:Item  key="CA"  text="CANADA"></core:Item>
                     <core:Item  key="AM"  text="AMERICA" > </core:Item>
                  </ComboBox>
                 <Label text="ETL Material Code" />
-              <Input  value="bfb" width="50%" />
+              <Input  value="bfb" width="20%" />
               <Label id="lableNum" visible="false" text="Label Number"/>
-            <Input id="lableNumInput" visible="false" width="50%"></Input>
+            <Input id="lableNumInput" visible="false" width="20%"></Input>
                 </form:SimpleForm>
         
     </Panel>
     <form:SimpleForm layout="ResponsiveGridLayout" class="sapUiMediumMarginBottom">  
             <Label text="Plant"  />
-                 <ComboBox width="50%">
+                 <ComboBox width="20%">
                     <core:Item  key="IN" text="INDIA" ></core:Item>
                     <core:Item  key="CA"  text="CANADA"></core:Item>
                     <core:Item  key="AM"  text="AMERICA" > </core:Item>
                  </ComboBox>
                 <Label text="ETL Material Code" />
-              <Input  value="bfb" width="50%"/>
+              <Input  value="bfb" width="20%"/>
               <Label text="Customer Part No" />
-              <Input  value="134235" width="50%"/>
+              <Input  value="134235" width="40%"/>
 
               <HBox >
                 <Label text="Packaging No" class="sapUiTinyMarginEnd"></Label>
@@ -48,7 +48,7 @@
     <Panel class="sapUiMediumMarginBottom">
     <form:SimpleForm layout="ResponsiveGridLayout" class="sapUiMediumMarginBottom">  
             <Label text="Scan Laser QRCode"  />
-              <Input  value="" width="50%"/>
+              <Input  value="" width="20%"/>
                 </form:SimpleForm>
     </Panel>
     <Panel headerText="Laser QR Code Detail" class="sapUiTinyMarginBottom">
@@ -58,7 +58,6 @@
                         
                         <!-- <SearchField width = "30%" search = "onSearch"  /> -->
                         <Title text="Laser QR Code Detail"></Title><ToolbarSpacer />
-                        <Button icon="sap-icon://add"  type="Emphasized"  />
                         <Button icon="sap-icon://less"  type="Emphasized"  />
 
                     </OverflowToolbar>

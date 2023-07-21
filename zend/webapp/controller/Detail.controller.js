@@ -20,6 +20,7 @@ sap.ui.define([
             },
             onPrint: function(oEvent) {
                 window.print()
+                // var oView = this.getView()
             },
 
             onNavBack: function () {

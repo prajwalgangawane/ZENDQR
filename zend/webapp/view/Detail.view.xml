@@ -12,29 +12,29 @@
             <form:SimpleForm layout="ResponsiveGridLayout">
           
             <Label text="Plant"  />
-                 <ComboBox width="50%">
+                 <ComboBox width="15%">
                     <core:Item  key="IN" text="INDIA" ></core:Item>
                     <core:Item  key="CA"  text="CANADA"></core:Item>
                     <core:Item  key="AM"  text="AMERICA" > </core:Item>
                  </ComboBox>
                 <Label text="ETL Material Code" />
-              <Input  value="bfb" width="50%" />
+              <Input  value="bfb" width="15%" />
               <Label id="lableNum" visible="true" text="Label Number"/>
-            <Input id="lableNumInput" visible="true" width="50%"></Input>
+            <Input id="lableNumInput" visible="true" width="15%"></Input>
                 </form:SimpleForm>
         
     </Panel>
     <form:SimpleForm layout="ResponsiveGridLayout" class="sapUiMediumMarginBottom">  
             <Label text="Plant"  />
-                 <ComboBox width="50%">
+                 <ComboBox width="15%">
                     <core:Item  key="IN" text="INDIA" ></core:Item>
                     <core:Item  key="CA"  text="CANADA"></core:Item>
                     <core:Item  key="AM"  text="AMERICA" > </core:Item>
                  </ComboBox>
                 <Label text="ETL Material Code" />
-              <Input  value="bfb" width="50%"/>
+              <Input  value="bfb" width="15%"/>
               <Label text="Customer Part No" />
-              <Input  value="134235" width="50%"/>
+              <Input  value="134235" width="30%"/>
 
               <HBox >
                 <Label text="Packaging No" class="sapUiTinyMarginEnd"></Label>
