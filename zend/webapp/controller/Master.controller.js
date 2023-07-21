@@ -27,6 +27,10 @@ sap.ui.define([
                     var createRadio = this.getView().byId('lableNum').setVisible(false)
                 var createRadioInput = this.getView().byId('lableNumInput').setVisible(false)
                 }
-            }
+            },
+            onPrint: function(oEvent) {
+                window.print()
+                // var oView = this.getView()
+            },
         });
     });
