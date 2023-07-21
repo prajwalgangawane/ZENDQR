@@ -49,9 +49,9 @@
                         
                         <!-- <SearchField width = "30%" search = "onSearch"  /> -->
                         <Title text="Laser QR Code Detail"></Title><ToolbarSpacer />
-                        <Label text="Scan Laser QRCode"  />
+                        <!-- <Label text="Scan Laser QRCode"  />
                         <Input  value="" width="20%"/>
-                        <Button icon="sap-icon://add"  type="Emphasized"  class="sapUiSmallMargin"/>
+                        <Button icon="sap-icon://add"  type="Emphasized"  class="sapUiSmallMargin"/> -->
 
                     </OverflowToolbar>
                 </headerToolbar>
