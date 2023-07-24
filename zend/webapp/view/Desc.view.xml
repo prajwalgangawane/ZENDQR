@@ -48,22 +48,6 @@
                 </VBox>
     </Panel>
     
-    <!-- <Panel class="sapUiMediumMarginBottom">
-    <form:SimpleForm layout="ResponsiveGridLayout" class="sapUiMediumMarginBottom">  
-            <Label text="Sales Organisation"  />
-              <Input  value="" width="30%"/>
-
-               <Label text="Plant"  />
-              <Input  value="" width="30%"/>
-                </form:SimpleForm>
-    </Panel> -->
-
-    <!-- <Panel class="sapUiMediumMarginBottom">
-    <form:SimpleForm layout="ResponsiveGridLayout" class="sapUiMediumMarginBottom">  
-            <Label text="Scan Outer QRCode"  />
-              <Input  value="" width="30%"/>
-                </form:SimpleForm>
-    </Panel> -->
     <Panel headerText="Laser QR Code Detail" class="sapUiTinyMarginBottom">
         
                 <headerToolbar>
@@ -89,7 +73,7 @@
                 <Column><header><Text text="Customer Code"></Text></header></Column>
                 <Column><header><Text text="Material Desc"></Text></header></Column>
                 <Column><header><Text text="Delivered Qty"></Text></header></Column>
-                <Column><header><Text text="U..."></Text></header></Column>
+                <Column><header><Text text="UoM"></Text></header></Column>
                 <Column><header><Text text="Packaging Qty"></Text></header></Column>
                 <Column><footer><HBox justifyContent="End"><Button text="Save" type="Emphasized" class="sapUiSmallMarginEnd"></Button><Button text="Submit" type="Emphasized"></Button></HBox></footer></Column>
         
