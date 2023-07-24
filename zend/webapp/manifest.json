@@ -69,7 +69,7 @@
           "bundleName": "zend.i18n.i18n"
         }
       },
-      "": {
+      "n": {
         "dataSource": "mainService",
         "preload": true,
         "settings": {}
