@@ -28,7 +28,13 @@ sap.ui.define(
                 }
             },
             onPrint: function () {
-                window.print()
+                // window.print()
+                var printpage = document.implementation.createHTMLDocument('Master page')
+                printpage.head.innerHTML = document.head.innerHTML
+                printpage.body.innerHTML = document.getElementById('__panel0-content').outerHTML
+                var wind = window.open('', 'printwindow')
+                wind.document.write(printpage.head.outerHTML + printpage.body.outerHTML)
+                setTimeout(() => wind.print(), 1000)
             },
 
             NavtoDetail: function () {
